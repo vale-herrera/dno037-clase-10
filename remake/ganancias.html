@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
+        <title>&#127793;EVALUACIÓN Nº2 &#127793;</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html">Locaciones</a> <a href="ganancias.html" class="active">Ganancias</a></p>
+            </nav>
+            <main>
+                <canvas id="grafico" height="40" width="100">
+                    <!--acá se mete el mapa-->
+                </canvas>
+            </main>
+            <footer>
+                <p><a href="#">Valentina Herrera</a> <a href="#">DNO037</a></p>
+            </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <script>
+var ctx = document.getElementById('grafico').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['El castillo en el cielo', 'Mi vecino Totoro', 'Kiki: Entregas a domicilio', 'Porco Rosso', 'La princesa Mononoke', 'El viaje de Chihiro', 'El increíble castillo vagabundo', 'Ponyo y el secreto de la sirenita', 'Se levanta el viento'],
+        datasets: [{
+            label: 'Recaudación mundial en dólares',
+            data: [6040021, 30550727, 10151019, 1354960, 169785704, 355475245, 236214446, 204826668, 136533257],
+            backgroundColor: 'rgba(162, 230, 224, 0.8)',
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    </body>
+</html>
