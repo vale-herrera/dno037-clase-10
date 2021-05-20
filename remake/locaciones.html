@@ -4,27 +4,34 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
-        <title>&#127793;EVALUACIÓN Nº2 &#127793;</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+        <link href="style.css" rel="stylesheet" />
+        <title>Remake &#127909;</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-
-        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html" class="active">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
+        <div class="container fixed-top">
+            <nav class="d-flex justify-content-between py-3">
+                <a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html"class="active">Locaciones</a> <a href="ganancias.html">Ganancias</a>
             </nav>
-            <main>
-                <div id="mapa">
-                    <!--acá se mete el mapa-->
+        </div>
+        <main class="container py-5">
+            <div class="row py-3">
+                <div div id="mapa" class="col-12">
+                    locaciones
                 </div>
-            </main>
-            <footer>
-                <p><a href="#">Valentina Herrera</a> <a href="#">DNO037</a></p>
+            </div>
+        </main>
+        <div class="container fixed-bottom">
+            <footer class="d-flex justify-content-between py-3">
+                <div>Valentina Herrera</div>
+                <div>DNO037</div>
             </footer>
         </div>
-<script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+        <script>
     var mymap = L.map('mapa').setView([34.066667, 134.55], 5);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,
@@ -56,8 +63,6 @@
     L.marker([35.716667, 139.75], {icon: icon}).addTo(mymap).bindPopup("<b>Bunkyō, Tokio.</b> Aquí es donde nació Hayao Miyazaki, en 1941.");
     L.marker([35.780618,139.4220433], {icon: icon3}).addTo(mymap).bindPopup("<b>Sayama Hills, Prefectura de Saitama.</b> Aquí se encuentra el bosque donde vive Totoro en 'Mi vecino Totoro'.");
     L.marker([30.371111, 130.665], {icon: icon2}).addTo(mymap).bindPopup("<b>Yakushima, Kagoshima</b> En esta isla se encuentra el bosque que aparece en 'La princesa Mononoke'.");
-
-
 
 </script>
     </body>
