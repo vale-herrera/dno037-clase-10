@@ -9,7 +9,6 @@
 
 * {
     margin: 0;
-    padding: 0;
 }
 
 body {
@@ -20,7 +19,7 @@ body {
 
 body.portada{
     background:var(--fondo) url('images/portada.jpeg') right bottom no-repeat;
-    background-size:auto 90%;
+    background-size:auto 100%;
 }
 
 a {
@@ -74,7 +73,6 @@ header {
 
 header div{
     width: 50%;
-    padding-top:15vh;
 }
 
 header div h1{
@@ -102,7 +100,6 @@ header div p{
 
 main{
     width: 100%;
-    padding-top:10vh;
     min-height: 70vh;    
 }
 
@@ -125,11 +122,6 @@ main article:hover img{
     opacity:1;
 }
 
-main article div{
-    padding:5%;
-    min-height:7.5vh;
-}
-
 main article div h2{
     font-size:1rem;
     letter-spacing: 0.05rem;
@@ -140,8 +132,6 @@ main article div h2{
         width:48%;
     }     
 }
-
-/* para cada página de película */
 
 main section{
     float:left;
@@ -181,8 +171,6 @@ main section p{
         line-height: 1.8;
     }    
 }
-
-/* para las páginas de locaciones y ganancias */
 
 main div#mapa{
     margin:1%;
